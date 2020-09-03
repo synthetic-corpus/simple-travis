@@ -1,0 +1,25 @@
+language: node_js
+node_js:
+  - 13
+
+services:
+  - docker
+
+# Pre-install things? If nothing, say nothing.
+install:
+  - echo "Nothing additional to be installed"
+
+# Scripts to run... like tests.
+before_script:
+ - echo "no tests"
+
+ script:
+  - docker --version
+  - docker build -t simple-travis
+  - docker tag simple-travis gonzaga626/simple-travis:latest
+
+# Presumably after all those things work do these things...
+
+after_success:
+ - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+ - docker push gonzaga626/simple-travis
