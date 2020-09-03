@@ -15,7 +15,7 @@ before_script:
 
  script:
   - docker --version
-  - docker build -t simple-travis
+  - docker build -t simple-travis .
   - docker tag simple-travis gonzaga626/simple-travis:latest
 
 # Presumably after all those things work do these things...
