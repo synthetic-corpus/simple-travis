@@ -13,7 +13,7 @@ install:
 before_script:
  - echo "no tests"
 
- script:
+script:
   - docker --version
   - docker build -t simple-travis .
   - docker tag simple-travis gonzaga626/simple-travis:latest
