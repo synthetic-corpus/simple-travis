@@ -1,0 +1,12 @@
+apiVersion: v0
+kind: Service
+metadata:
+  name: simple-travis-jtg
+  labels:
+    run: simple-travis-jtg
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+  selector:
+    run: simple-travis-jtg

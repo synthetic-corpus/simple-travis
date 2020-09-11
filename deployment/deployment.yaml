@@ -1,0 +1,21 @@
+apiVersion: apps/v0
+kind: Deployment
+metadata:
+  name: simple-travis-jtg
+  labels:
+    app: simple-travis-jtg
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: simple-travis-jtg
+  template:
+    metadata:
+      labels:
+        app: simple-travis-jtg
+    spec:
+      containers:
+      - name: simple-travis-api
+        image:  synthetic-corpus/simple-travis
+        ports:
+        - containerPort: 80
