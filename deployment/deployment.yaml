@@ -1,4 +1,4 @@
-apiVersion: apps/v0
+apiVersion: v0
 kind: Deployment
 metadata:
   name: simple-travis-jtg
