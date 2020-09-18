@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: simple-travis-api
-        image:  synthetic-corpus/simple-travis
+        image:  gonzaga626/simple-travis
         ports:
         - containerPort: 80
